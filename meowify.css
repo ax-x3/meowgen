@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    background-image: url(meow.png);
+    background-size: 256px;
+    animation: scroll 45s linear infinite;
+    image-rendering: pixelated;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, sans-serif ;
+}
+h1 {
+    margin: 0 0 .5em 0;
+}
+hr {
+    border: solid 1px #fff4;
+}
+label.label {
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+}
+sub.label {
+    display: inline-block;
+    transform: translateX(calc(100px + 0.5em));
+    opacity: 0.5;
+}
+input[type="text"],
+input[type="number"] {
+    width: 150px;
+}
+input[type="range"] {
+    width: 150px;
+    padding: 0px;
+    transform: translateY(5px);
+    accent-color: #ba70ff;
+}
+input,
+textarea,
+select {
+    background-color: #fff4;
+    color: white;
+    border: inset 2px #fff6;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: inherit;
+}
+button {
+    background-color: #8a2be2dd;
+    color: white;
+    border: outset 2px #fff6;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    height: 240px;
+    line-height: 150%;
+    resize: vertical;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.centertext {
+    text-align: center;
+}
+.column {
+    width: 400px;
+    box-sizing: border-box;
+}
+.main {
+    backdrop-filter: blur(10px) brightness(0.4);
+    padding: 30px;
+    border-radius: 30px;
+}
+input.short {
+    width: 50px;
+}
+.indent {
+    margin-left: 1em;
+}
+
+@keyframes scroll {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 512px 256px;
+    }
+}

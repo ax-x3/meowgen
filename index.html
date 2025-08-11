@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <link href="meowify.css" rel="stylesheet">
+    <script src="meower.js"></script>
+    <title>meowgen</title>
+</head>
+<body onload="load();">
+    <div style="height: 50px"></div>
+    <div class="column center main">
+        <div class="centertext">
+            <h1>meowgen</h1>
+            <sub><i>advanced generative procedural communication</i></sub>
+        </div>
+        <br><hr><br>
+        <div class="centertext">
+            <label for="preset">preset:</label>
+            <select id="preset" name="preset" class="preset">
+                <option value="custom" disabled>custom</option>
+                <option value="happy" selected>happy</option>
+                <option value="silly">silly</option>
+                <option value="eepy">eepy</option>
+                <option value="drunk">drunk</option>
+            </select>
+        </div>
+        <br><hr><br>
+        <div class="indent" id="form">
+            <label class="label" for="minlength">meow for</label>
+            <input class="short" id="minlength" name="minlength" type="number" min="2" max="100" placeholder="2-100" autocomplete="off" required>
+            <label for="maxlength">to</label>
+            <input class="short" id="maxlength" name="maxlength" type="number" min="2" max="100" placeholder="2-100" autocomplete="off" required>
+            letters
+            <br><br>
+            
+            <label class="label" for="meowlphabet">meowlphabet:</label>
+            <input id="meowlphabet" name="meowlphabet" type="text" placeholder="letters to meow" autocomplete="off" required>
+            <br>
+            <sub class="label">enter in expected meow order</sub>
+            <br><br>
+
+            <label class="label" for="start">start with</label>
+            <input class="short" id="start" name="start" type="text" maxlength="1" autocomplete="off">
+            <br><br>
+            <label class="label" for="purr">purr with</label>
+            <input class="short" id="purr" name="purr" type="text" maxlength="1" autocomplete="off" required>
+            <br><br>
+            <label class="label" for="end">end with</label>
+            <input class="short" id="end" name="end" type="text" maxlength="1" autocomplete="off">
+            <br><br>
+
+            <label class="label" for="sanitycoef">sanity:</label>
+            <input id="sanitycoef" name="sanitycoef" type="range" min="0" max="1" step="0.01" placeholder="0-1" required>
+            <span id="sanitycoefOut"></span>
+            <br>
+            <sub class="label">increase for more predictability</sub>
+            <br><br>
+            <label class="label" for="alertcoef">alertness:</label>
+            <input id="alertcoef" name="alertcoef" type="range" min="0" max="1" step="0.01" placeholder="0-1" required>
+            <span id="alertcoefOut"></span>
+            <br>
+            <sub class="label">increase for more vocalization</sub>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <button id="meow" name="meow" onclick="meowMain();">meow</button>
+        <input class="short" id="count" name="count" type="number" min="1" max="100" value="10" placeholder="1-100" required>
+        <label for="count">time(s)</label>
+        <br><br>
+        <textarea id="output"></textarea>
+    </div>
+    <br>
+    <div class="column center centertext">
+        <a href="https://amethystx.net/" target="_blank"><img src="https://amethystx.net/badges/88x31.gif"></a>
+        <br>
+        <sub>
+            &copy; amethyst 2025
+            <br>
+            all meows reserved
+        </sub>
+    </div>
+</body>
+</html>
