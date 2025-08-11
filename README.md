@@ -1,2 +1,2 @@
 # meowgen
-generate meows
+advanced generative procedural communication
